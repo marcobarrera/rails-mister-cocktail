@@ -25,5 +25,6 @@
   </tbody>
 </table>
 
-<%= link_to 'Back', cocktails_path %>  |
-<%= link_to 'Add dose', new_cocktail_dose_path(@cocktail) %>
+<%= render "doses/new", cocktail: @cocktail, dose: @dose %>
+
+<%= link_to 'Back', cocktails_path %>
