@@ -13,6 +13,15 @@
   </head>
 
   <body>
+    <nav class="navbar navbar-light bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand">Cocktails</a>
+        <form class="d-flex">
+          <%= link_to "Home", cocktails_path, class: "btn btn-outline-success" %>
+          <%= link_to "Add a cocktail", new_cocktail_path, class: "btn btn-outline-success" %>
+        </form>
+      </div>
+    </nav>
     <%= yield %>
   </body>
 </html>
