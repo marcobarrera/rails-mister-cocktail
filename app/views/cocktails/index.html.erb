@@ -1,19 +1,29 @@
 <h1>Cocktails</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th colspan="1"></th>
-    </tr>
-  </thead>
-
-  <tbody>
+<div class="container">
+  <div class="row">
     <% @cocktails.each do |cocktail| %>
-      <tr>
-        <td><%= cocktail.name %></td>
-        <td><%= link_to 'Show', cocktail %></td>
-      </tr>
+      <div class="col-12 col-lg-4 mb-4">
+        <div class="card" style="width: 18rem;">
+          <img src="https://www.liquor.com/thmb/WxxD8oIVqce14UZIRW4F2-vvhpU=/720x720/filters:fill(auto,1)/__opt__aboutcom__coeus__resources__content_migration__liquor__2018__09__04153106__mojito-720x720-recipe-a55b114fc99c4a64b38c9ef6d1660e20.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title"><%= cocktail.name %></h5>
+            <%= link_to 'See Ingredients', cocktail, class: "btn btn-primary" %>
+          </div>
+        </div>
+      </div>
     <% end %>
-  </tbody>
-</table>
+  </div>
+</div>
+<!-- <div class="container">
+  <div class="row">
+
+    <div class="col-6">
+    </div>
+
+    <div class="col-6">
+    </div>
+
+  </div>
+</div>
+ -->
